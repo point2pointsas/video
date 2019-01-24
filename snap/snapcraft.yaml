@@ -4,12 +4,15 @@
   summary: Application for Digital ADS
   description: |
     Client core for IdeoCast
-
+  base: core18
   grade: devel # must be 'stable' to release into candidate/stable channels
   confinement: devmode # use 'strict' once you have the right plugs and slots
 
   parts:
-    my-part:
-      # See 'snapcraft plugins'
-      plugin: nil
+    ideocast:
+      plugin: dotnet
+      
+  apps:
+   ideocast:
+    command: ideocast
   
